@@ -7,12 +7,12 @@
     
 
     function chatgpt($prompt) {
-        $client = OpenAI::client("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");
+        $client = OpenAI::client("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");
         $result = $client->completions()->create([
             'model' => 'text-davinci-003', 
             'prompt' => $prompt,
             'max_tokens' => 2000,
-            'temperature' => 0
+            'temperature' => 0.2
         ]);
 
         return $result;
